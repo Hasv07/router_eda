@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/EDA/New folder/EDA/demux8_tb_isim_beh.exe" -prj "D:/EDA/New folder/EDA/demux8_tb_beh.prj" "work.demux8_tb" 

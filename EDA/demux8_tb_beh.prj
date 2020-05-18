@@ -1,0 +1,2 @@
+vhdl work "demux8.vhd"
+vhdl work "demux8_tb.vhd"
