@@ -1,1 +1,2 @@
-work	"ram.vhd"
+work	"Gray_Counter.vhd"
+work	"gra_to_binary.vhd"

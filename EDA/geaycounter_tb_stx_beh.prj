@@ -1,0 +1,2 @@
+vhdl isim_temp "Gray_Counter.vhd"
+vhdl isim_temp "geaycounter_tb.vhd"

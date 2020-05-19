@@ -5,34 +5,31 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"D:\EDA\New folder\EDA\ram.vhd" Line 48: <arg fmt="%s" index="1">addr_a</arg> should be on the sensitivity list of the process
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"D:\EDA\New folder\EDA\Gray_Counter.vhd" Line 51: <arg fmt="%s" index="1">en</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="871" delta="old" >"D:\EDA\New folder\EDA\ram.vhd" Line 48: Using initial value <arg fmt="%s" index="1">0</arg> for <arg fmt="%s" index="2">a</arg> since it is never assigned
+<msg type="info" file="Xst" num="2774" delta="old" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">r_p</arg> may hinder XST clustering optimizations.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"D:\EDA\New folder\EDA\ram.vhd" Line 49: <arg fmt="%s" index="1">addr_b</arg> should be on the sensitivity list of the process
+<msg type="info" file="Xst" num="2774" delta="old" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">w_p</arg> may hinder XST clustering optimizations.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="871" delta="old" >"D:\EDA\New folder\EDA\ram.vhd" Line 49: Using initial value <arg fmt="%s" index="1">0</arg> for <arg fmt="%s" index="2">b</arg> since it is never assigned
+<msg type="warning" file="Xst" num="3001" delta="old" >This design contains one or more registers or latches with an active
+asynchronous set and asynchronous reset. While this circuit can be built,
+it creates a sub-optimal implementation in terms of area, power and
+performance. For a more optimal implementation Xilinx highly recommends
+one of the following:
+
+       1) Remove either the set or reset from all registers and latches if
+          not needed for required functionality
+       2) Modify the code in order to produce a synchronous set
+          and/or reset (both is preferred)
+       3) Use the -async_to_sync option to transform the asynchronous
+          set/reset to synchronous operation
+          (timing simulation highly recommended when using this option)
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"D:\EDA\New folder\EDA\ram.vhd" Line 51: <arg fmt="%s" index="1">w_en</arg> should be on the sensitivity list of the process
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="92" delta="old" >"D:\EDA\New folder\EDA\ram.vhd" Line 56: <arg fmt="%s" index="1">r_en</arg> should be on the sensitivity list of the process
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">addr_a&lt;2:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">addr_b&lt;2:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="3015" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">mem</arg>&gt; may be accessed with an index that does not cover the full array size or with a negative index. The RAM size is reduced to the index upper access or for only positive index values.
-</msg>
-
-<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_mem</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

@@ -1,0 +1,2 @@
+vhdl work "Gray_Counter.vhd"
+vhdl work "geaycounter_tb.vhd"
