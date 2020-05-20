@@ -1,0 +1,18 @@
+ISim log file
+Running: D:\EDA\New folder\EDA\fifo_controller_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/EDA/New folder/EDA/fifo_controller_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 220 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 85 ns(2), Instance /fifo_controller_tb/uut/w/C1/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+at 85 ns(3), Instance /fifo_controller_tb/uut/w/C1/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+at 95 ns(2), Instance /fifo_controller_tb/uut/w/C1/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+at 95 ns(3), Instance /fifo_controller_tb/uut/w/C1/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+at 175 ns(2), Instance /fifo_controller_tb/uut/r/C1/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+at 175 ns(3), Instance /fifo_controller_tb/uut/r/C1/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+at 185 ns(2), Instance /fifo_controller_tb/uut/r/C1/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
+at 185 ns(3), Instance /fifo_controller_tb/uut/r/C1/ : Warning: NUMERIC_STD.TO_SIGNED: vector truncated
