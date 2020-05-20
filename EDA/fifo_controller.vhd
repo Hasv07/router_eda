@@ -36,8 +36,8 @@ entity fifo_controller is
            wclk : in  STD_LOGIC;
            rreq : in  STD_LOGIC;
            wreq : in  STD_LOGIC;
-           w_valid : out  STD_LOGIC;
-           r_valid : out  STD_LOGIC;
+           write_valid : out  STD_LOGIC;
+           read_valid : out  STD_LOGIC;
            w_ptr : out  STD_LOGIC_VECTOR (2 downto 0);
            r_ptr : out  STD_LOGIC_VECTOR (2 downto 0);
 
@@ -48,13 +48,13 @@ end fifo_controller;
 architecture Behavioral of fifo_controller is
 component gray_to_binary is
     Port (
-	        clk : in  STD_LOGIC;
+            clk : in  STD_LOGIC;
            en : in  STD_LOGIC;
            reset : in  STD_LOGIC;
-	        gray_in : inout  STD_LOGIC_VECTOR (3 downto 0);
-           bin_out : out  STD_LOGIC_VECTOR (2 downto 0)
-			  
-			  );
+			  	gray_out:out  STD_LOGIC_VECTOR (3 downto 0);
+            bin_out : out  STD_LOGIC_VECTOR (2 downto 0)
+              
+              );
 
 end component;           
 signal w_p : STD_LOGIC_VECTOR (3 downto 0);
@@ -65,8 +65,8 @@ signal r_flag: std_logic;
 signal w_flag: std_logic;
 
 begin 
-r: gray_to_binary  PORT MAP (clk=>rdclk,reset=>reset,en=>r_flag,gray_in=>r_p,bin_out=>r_ptr);
-w: gray_to_binary  PORT MAP (clk=>wclk,reset=>reset,en=>w_flag,gray_in=>w_p,bin_out=>w_ptr);
+r: gray_to_binary  PORT MAP (clk=>rdclk,reset=>reset,en=>r_flag,gray_out=>r_p,bin_out=>r_ptr);
+w: gray_to_binary  PORT MAP (clk=>wclk,reset=>reset,en=>w_flag,gray_out=>w_p,bin_out=>w_ptr);
 full<=f_check;
 empty<=e_check;
   
@@ -74,29 +74,29 @@ empty<=e_check;
  begin
  if  e_check='0' then
         r_flag<=rreq and '1';
-        r_valid<='1';
+        read_valid<='1';
   else 
          r_flag<=rreq and '0';
-        r_valid<='0';
+        read_valid<='0';
  end if;
  if  f_check='0' then
         w_flag<=wreq and '1';
-		  w_valid<='1';
+          write_valid<='1';
  else 
         w_flag<=wreq and '0';
-		  w_valid<='0';
+          write_valid<='0';
   end if;
   end process;       
   p2:process(w_p,r_p)
   begin
    if w_p=r_p then
-	      e_check<='1';
-	else   e_check<='0';
-	end if;
-   if w_p(3 downto 2)=not r_p(3 downto 2) then
-	      f_check<='1';
-	else  f_check<='0';
-	end if;
+          e_check<='1';
+    else   e_check<='0';
+    end if;
+   if w_p(3 downto 2)=not r_p(3 downto 2) and w_p(1 downto 0)= r_p(1 downto 0)   then
+          f_check<='1';
+    else  f_check<='0';
+    end if;
    end process;  
 
  end Behavioral;

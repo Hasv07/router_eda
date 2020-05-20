@@ -32,10 +32,10 @@ USE ieee.std_logic_1164.ALL;
 -- arithmetic functions with Signed or Unsigned values
 --USE ieee.numeric_std.ALL;
  
-ENTITY geaycounter_tb IS
-END geaycounter_tb;
+ENTITY graycounter_tb IS
+END graycounter_tb;
  
-ARCHITECTURE behavior OF geaycounter_tb IS 
+ARCHITECTURE behavior OF graycounter_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  

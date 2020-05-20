@@ -1,3 +1,0 @@
-vhdl work "Gray_Counter.vhd"
-vhdl work "gra_to_binary.vhd"
-vhdl work "gray_to_binary_tb.vhd"

@@ -34,7 +34,7 @@ entity gray_to_binary is
 	        clk : in  STD_LOGIC;
            en : in  STD_LOGIC;
            reset : in  STD_LOGIC;
-	        gray_in : inout  STD_LOGIC_VECTOR (3 downto 0);
+			  gray_out:out  STD_LOGIC_VECTOR (3 downto 0);
            bin_out : out  STD_LOGIC_VECTOR (2 downto 0)
 			  
 			  );
@@ -50,8 +50,11 @@ component Gray_Counter is
            count_out : out  STD_LOGIC_VECTOR (3 downto 0));
 			  
 end component;
+signal gray_in :  STD_LOGIC_VECTOR (3 downto 0);
+
    BEGIN  
      C1: Gray_Counter  PORT MAP (clk=>clk,reset=>reset,en=>en,count_out=>gray_in);
+	  gray_out<=gray_in;
     bin_out(2)<= gray_in(3) xor gray_in(2);
     bin_out(1)<= gray_in(3) xor gray_in(2) xor gray_in(1);
     bin_out(0)<= gray_in(3) xor gray_in(2) xor gray_in(1) xor gray_in(0);

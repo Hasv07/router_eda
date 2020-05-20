@@ -44,7 +44,7 @@ ARCHITECTURE behavior OF gray_to_binary_tb IS
          clk : IN  std_logic;
          en : IN  std_logic;
          reset : IN  std_logic;
-         gray_in : INOUT  std_logic_vector(3 downto 0);
+			  gray_out:out  STD_LOGIC_VECTOR (3 downto 0);
          bin_out : OUT  std_logic_vector(2 downto 0)
 
         );
@@ -57,7 +57,7 @@ ARCHITECTURE behavior OF gray_to_binary_tb IS
    signal reset : std_logic := '0';
 
 	--BiDirs
-   signal gray_in : std_logic_vector(3 downto 0);
+   signal gray_out : std_logic_vector(3 downto 0);
 
  	--Outputs
    signal bin_out : std_logic_vector(2 downto 0);
@@ -72,7 +72,7 @@ BEGIN
           clk => clk,
           en => en,
           reset => reset,
-          gray_in => gray_in,
+          gray_out => gray_out,
           bin_out => bin_out
         );
 

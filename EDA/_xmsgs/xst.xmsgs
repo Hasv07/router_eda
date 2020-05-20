@@ -8,12 +8,6 @@
 <msg type="warning" file="HDLCompiler" num="92" delta="old" >"D:\EDA\New folder\EDA\Gray_Counter.vhd" Line 51: <arg fmt="%s" index="1">en</arg> should be on the sensitivity list of the process
 </msg>
 
-<msg type="info" file="Xst" num="2774" delta="old" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">r_p</arg> may hinder XST clustering optimizations.
-</msg>
-
-<msg type="info" file="Xst" num="2774" delta="old" >HDL ADVISOR - <arg fmt="%s" index="1">KEEP</arg> <arg fmt="%s" index="2">property</arg> attached to signal <arg fmt="%s" index="3">w_p</arg> may hinder XST clustering optimizations.
-</msg>
-
 <msg type="warning" file="Xst" num="3001" delta="old" >This design contains one or more registers or latches with an active
 asynchronous set and asynchronous reset. While this circuit can be built,
 it creates a sub-optimal implementation in terms of area, power and

@@ -1,2 +1,3 @@
 work	"Gray_Counter.vhd"
+work	"fifo_controller.vhd"
 work	"gra_to_binary.vhd"

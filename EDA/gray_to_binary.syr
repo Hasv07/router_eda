@@ -1,4 +1,4 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
@@ -10,7 +10,7 @@ Total CPU time to Xst completion: 0.08 secs
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: gray_to_binary.prj
 
@@ -324,9 +324,9 @@ Primitive and Black Box Usage:
 #      LDC                         : 32
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 14
+# IO Buffers                       : 9
 #      IBUF                        : 2
-#      OBUF                        : 12
+#      OBUF                        : 7
 
 Device utilization summary:
 ---------------------------
@@ -347,8 +347,8 @@ Slice Logic Distribution:
    Number of unique control sets:        97
 
 IO Utilization: 
- Number of IOs:                          15
- Number of bonded IOBs:                  15  out of    210     7%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    210     4%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
@@ -423,7 +423,7 @@ Speed Grade: -3
 
    Minimum period: 3.043ns (Maximum Frequency: 328.623MHz)
    Minimum input arrival time before clock: 1.526ns
-   Maximum output required time after clock: 1.303ns
+   Maximum output required time after clock: 1.298ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1851,9 +1851,9 @@ Offset:              1.526ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 18 / 12
+  Total number of paths / destination ports: 13 / 7
 -------------------------------------------------------------------------
-Offset:              1.303ns (Levels of Logic = 2)
+Offset:              1.298ns (Levels of Logic = 2)
   Source:            C1/curr_0 (FF)
   Destination:       bin_out<0> (PAD)
   Source Clock:      clk rising
@@ -1862,12 +1862,12 @@ Offset:              1.303ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.361   0.566  C1/curr_0 (C1/curr_0)
+     FDE:C->Q              2   0.361   0.561  C1/curr_0 (C1/curr_0)
      LUT4:I0->O            1   0.097   0.279  bin_out<0>1 (bin_out_0_OBUF)
      OBUF:I->O                 0.000          bin_out_0_OBUF (bin_out<0>)
     ----------------------------------------
-    Total                      1.303ns (0.458ns logic, 0.845ns route)
-                                       (35.1% logic, 64.9% route)
+    Total                      1.298ns (0.458ns logic, 0.840ns route)
+                                       (35.3% logic, 64.7% route)
 
 =========================================================================
 
@@ -2205,12 +2205,12 @@ clk                   |    3.043|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.29 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.58 secs
  
 --> 
 
-Total memory usage is 4625568 kilobytes
+Total memory usage is 301696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-05-20T00:52:21</DateModified>
+  <DateModified>2020-05-20T10:55:20</DateModified>
   <ModuleName>fifo_controller</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2020-05-20T04:27:01</SummaryTimeStamp>
   <SavedFilePath>D:/EDA/New folder/EDA/iseconfig/fifo_controller.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/EDA/New folder/EDA</ImplementationReportsDirectory>
-  <DateInitialized>2020-05-20T00:52:21</DateInitialized>
+  <ImplementationReportsDirectory>D:/EDA/New folder/EDA\</ImplementationReportsDirectory>
+  <DateInitialized>2020-05-20T04:25:55</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

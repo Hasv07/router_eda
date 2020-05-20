@@ -1,16 +1,16 @@
-Release 14.7 - xst P.20131013 (nt64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Reading design: fifo_controller.prj
 
@@ -133,11 +133,10 @@ WARNING:HDLCompiler:92 - "D:\EDA\New folder\EDA\Gray_Counter.vhd" Line 51: en sh
 Synthesizing Unit <fifo_controller>.
     Related source file is "D:\EDA\New folder\EDA\fifo_controller.vhd".
     Found 4-bit comparator equal for signal <empty> created at line 92
-    Found 2-bit comparator equal for signal <full> created at line 96
-INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal r_p may hinder XST clustering optimizations.
-INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal w_p may hinder XST clustering optimizations.
+    Found 2-bit comparator equal for signal <r_p[3]_w_p[3]_equal_3_o> created at line 96
+    Found 2-bit comparator equal for signal <r_p[1]_w_p[1]_equal_4_o> created at line 96
     Summary:
-	inferred   2 Comparator(s).
+	inferred   3 Comparator(s).
 	inferred   2 Multiplexer(s).
 Unit <fifo_controller> synthesized.
 
@@ -199,8 +198,8 @@ Macro Statistics
 # Registers                                            : 66
  1-bit register                                        : 64
  4-bit register                                        : 2
-# Comparators                                          : 4
- 2-bit comparator equal                                : 1
+# Comparators                                          : 5
+ 2-bit comparator equal                                : 2
  32-bit comparator greater                             : 2
  4-bit comparator equal                                : 1
 # Multiplexers                                         : 6
@@ -224,8 +223,8 @@ Macro Statistics
  32-bit adder                                          : 2
 # Registers                                            : 72
  Flip-Flops                                            : 72
-# Comparators                                          : 4
- 2-bit comparator equal                                : 1
+# Comparators                                          : 5
+ 2-bit comparator equal                                : 2
  32-bit comparator greater                             : 2
  4-bit comparator equal                                : 1
 # Multiplexers                                         : 6
@@ -328,14 +327,14 @@ Top Level Output File Name         : fifo_controller.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 511
+# BELS                             : 512
 #      GND                         : 1
 #      LUT1                        : 64
-#      LUT2                        : 68
+#      LUT2                        : 72
 #      LUT3                        : 70
-#      LUT4                        : 5
-#      LUT5                        : 25
-#      LUT6                        : 135
+#      LUT4                        : 2
+#      LUT5                        : 22
+#      LUT6                        : 138
 #      MUXCY                       : 78
 #      VCC                         : 1
 #      XORCY                       : 64
@@ -358,14 +357,14 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             200  out of  126800     0%  
- Number of Slice LUTs:                  367  out of  63400     0%  
-    Number used as Logic:               367  out of  63400     0%  
+ Number of Slice LUTs:                  368  out of  63400     0%  
+    Number used as Logic:               368  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    483
-   Number with an unused Flip Flop:     283  out of    483    58%  
-   Number with an unused LUT:           116  out of    483    24%  
-   Number of fully used LUT-FF pairs:    84  out of    483    17%  
+ Number of LUT Flip Flop pairs used:    484
+   Number with an unused Flip Flop:     284  out of    484    58%  
+   Number with an unused LUT:           116  out of    484    23%  
+   Number of fully used LUT-FF pairs:    84  out of    484    17%  
    Number of unique control sets:       194
 
 IO Utilization: 
@@ -478,7 +477,7 @@ Speed Grade: -3
 
    Minimum period: 3.043ns (Maximum Frequency: 328.623MHz)
    Minimum input arrival time before clock: 1.545ns
-   Maximum output required time after clock: 1.836ns
+   Maximum output required time after clock: 1.935ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -543,7 +542,7 @@ Delay:               3.043ns (Levels of Logic = 34)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'wclk'
   Clock period: 3.043ns (frequency: 328.623MHz)
-  Total number of paths / destination ports: 10070 / 136
+  Total number of paths / destination ports: 10206 / 136
 -------------------------------------------------------------------------
 Delay:               3.043ns (Levels of Logic = 34)
   Source:            w/C1/bin_1_P_1 (FF)
@@ -3325,45 +3324,45 @@ Offset:              1.545ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'wclk'
-  Total number of paths / destination ports: 21 / 7
+  Total number of paths / destination ports: 25 / 7
 -------------------------------------------------------------------------
-Offset:              1.836ns (Levels of Logic = 3)
-  Source:            w/C1/curr_2 (FF)
-  Destination:       empty (PAD)
+Offset:              1.851ns (Levels of Logic = 3)
+  Source:            w/C1/curr_3 (FF)
+  Destination:       read_valid (PAD)
   Source Clock:      wclk rising
 
-  Data Path: w/C1/curr_2 to empty
+  Data Path: w/C1/curr_3 to read_valid
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              7   0.361   0.584  w/C1/curr_2 (w/C1/curr_2)
-     LUT4:I0->O            3   0.097   0.305  empty41_SW0 (N2)
-     LUT5:I4->O           65   0.097   0.391  empty41 (empty_OBUF)
-     OBUF:I->O                 0.000          empty_OBUF (empty)
+     FDE:C->Q              4   0.361   0.309  w/C1/curr_3 (w/C1/curr_3)
+     LUT2:I1->O            4   0.097   0.707  empty31 (empty4)
+     LUT6:I0->O            1   0.097   0.279  read_valid1 (read_valid_OBUF)
+     OBUF:I->O                 0.000          read_valid_OBUF (read_valid)
     ----------------------------------------
-    Total                      1.836ns (0.555ns logic, 1.281ns route)
-                                       (30.2% logic, 69.8% route)
+    Total                      1.851ns (0.555ns logic, 1.296ns route)
+                                       (30.0% logic, 70.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'rdclk'
-  Total number of paths / destination ports: 21 / 7
+  Total number of paths / destination ports: 25 / 7
 -------------------------------------------------------------------------
-Offset:              1.659ns (Levels of Logic = 3)
-  Source:            r/C1/curr_2 (FF)
-  Destination:       empty (PAD)
+Offset:              1.935ns (Levels of Logic = 3)
+  Source:            r/C1/curr_3 (FF)
+  Destination:       read_valid (PAD)
   Source Clock:      rdclk rising
 
-  Data Path: r/C1/curr_2 to empty
+  Data Path: r/C1/curr_3 to read_valid
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              7   0.361   0.407  r/C1/curr_2 (r/C1/curr_2)
-     LUT4:I2->O            3   0.097   0.305  empty41_SW0 (N2)
-     LUT5:I4->O           65   0.097   0.391  empty41 (empty_OBUF)
-     OBUF:I->O                 0.000          empty_OBUF (empty)
+     FDE:C->Q              4   0.361   0.393  r/C1/curr_3 (r/C1/curr_3)
+     LUT2:I0->O            4   0.097   0.707  empty31 (empty4)
+     LUT6:I0->O            1   0.097   0.279  read_valid1 (read_valid_OBUF)
+     OBUF:I->O                 0.000          read_valid_OBUF (read_valid)
     ----------------------------------------
-    Total                      1.659ns (0.555ns logic, 1.104ns route)
-                                       (33.5% logic, 66.5% route)
+    Total                      1.935ns (0.555ns logic, 1.380ns route)
+                                       (28.7% logic, 71.3% route)
 
 =========================================================================
 
@@ -3376,8 +3375,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_11_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_11_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_13_o
@@ -3386,8 +3385,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_13_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_13_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_15_o
@@ -3396,8 +3395,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_15_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_15_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_17_o
@@ -3406,8 +3405,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_17_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_17_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_19_o
@@ -3416,8 +3415,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_19_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_19_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_1_o
@@ -3426,8 +3425,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_1_o
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_1_o|         |         |    1.591|         |
-rdclk                  |         |         |    2.404|         |
-wclk                   |         |         |    2.581|         |
+rdclk                  |         |         |    2.474|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_21_o
@@ -3436,8 +3435,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_21_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_21_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_23_o
@@ -3446,8 +3445,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_23_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_23_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_25_o
@@ -3456,8 +3455,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_25_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_25_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_27_o
@@ -3466,8 +3465,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_27_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_27_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_29_o
@@ -3476,8 +3475,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_29_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_29_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_31_o
@@ -3486,8 +3485,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_31_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_31_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_33_o
@@ -3496,8 +3495,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_33_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_33_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_35_o
@@ -3506,8 +3505,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_35_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_35_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_37_o
@@ -3516,8 +3515,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_37_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_37_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_39_o
@@ -3526,8 +3525,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_39_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_39_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_3_o
@@ -3536,8 +3535,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_3_o
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_3_o|         |         |    1.591|         |
-rdclk                  |         |         |    2.404|         |
-wclk                   |         |         |    2.581|         |
+rdclk                  |         |         |    2.474|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_41_o
@@ -3546,8 +3545,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_41_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_41_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_43_o
@@ -3556,8 +3555,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_43_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_43_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_45_o
@@ -3566,8 +3565,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_45_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_45_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_47_o
@@ -3576,8 +3575,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_47_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_47_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_49_o
@@ -3586,8 +3585,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_49_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_49_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_51_o
@@ -3596,8 +3595,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_51_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_51_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_53_o
@@ -3606,8 +3605,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_53_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_53_o|         |         |    1.591|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_55_o
@@ -3616,8 +3615,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_55_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_55_o|         |         |    1.595|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_57_o
@@ -3626,8 +3625,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_57_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_57_o|         |         |    1.595|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_59_o
@@ -3636,8 +3635,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_59_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_59_o|         |         |    1.600|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_5_o
@@ -3646,8 +3645,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_5_o
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_5_o|         |         |    1.591|         |
-rdclk                  |         |         |    2.404|         |
-wclk                   |         |         |    2.581|         |
+rdclk                  |         |         |    2.474|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_61_o
@@ -3656,8 +3655,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_61_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_61_o|         |         |    1.600|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_63_o
@@ -3666,8 +3665,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_63_o
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_63_o|         |         |    1.600|         |
-rdclk                   |         |         |    2.404|         |
-wclk                    |         |         |    2.581|         |
+rdclk                   |         |         |    2.474|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_7_o
@@ -3676,8 +3675,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_7_o
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_7_o|         |         |    1.591|         |
-rdclk                  |         |         |    2.404|         |
-wclk                   |         |         |    2.581|         |
+rdclk                  |         |         |    2.474|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock r/C1/en_bin[31]_AND_9_o
@@ -3686,8 +3685,8 @@ Clock to Setup on destination clock r/C1/en_bin[31]_AND_9_o
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
 r/C1/en_bin[31]_AND_9_o|         |         |    1.591|         |
-rdclk                  |         |         |    2.404|         |
-wclk                   |         |         |    2.581|         |
+rdclk                  |         |         |    2.474|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock rdclk
@@ -3728,7 +3727,7 @@ r/C1/en_bin[31]_AND_63_o|         |    2.912|         |         |
 r/C1/en_bin[31]_AND_7_o |         |    2.704|         |         |
 r/C1/en_bin[31]_AND_9_o |         |    2.684|         |         |
 rdclk                   |    3.043|         |         |         |
-wclk                    |    2.581|         |         |         |
+wclk                    |    2.390|         |         |         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_11_o
@@ -3736,9 +3735,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_11_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_11_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_13_o
@@ -3746,9 +3745,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_13_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_13_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_15_o
@@ -3756,9 +3755,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_15_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_15_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_17_o
@@ -3766,9 +3765,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_17_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_17_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_19_o
@@ -3776,9 +3775,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_19_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_19_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_1_o
@@ -3786,9 +3785,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_1_o
                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
-rdclk                  |         |         |    2.179|         |
+rdclk                  |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_1_o|         |         |    1.591|         |
-wclk                   |         |         |    2.002|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_21_o
@@ -3796,9 +3795,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_21_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_21_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_23_o
@@ -3806,9 +3805,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_23_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_23_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_25_o
@@ -3816,9 +3815,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_25_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_25_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_27_o
@@ -3826,9 +3825,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_27_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_27_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_29_o
@@ -3836,9 +3835,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_29_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_29_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_31_o
@@ -3846,9 +3845,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_31_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_31_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_33_o
@@ -3856,9 +3855,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_33_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_33_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_35_o
@@ -3866,9 +3865,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_35_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_35_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_37_o
@@ -3876,9 +3875,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_37_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_37_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_39_o
@@ -3886,9 +3885,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_39_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_39_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_3_o
@@ -3896,9 +3895,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_3_o
                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
-rdclk                  |         |         |    2.179|         |
+rdclk                  |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_3_o|         |         |    1.591|         |
-wclk                   |         |         |    2.002|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_41_o
@@ -3906,9 +3905,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_41_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_41_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_43_o
@@ -3916,9 +3915,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_43_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_43_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_45_o
@@ -3926,9 +3925,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_45_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_45_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_47_o
@@ -3936,9 +3935,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_47_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_47_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_49_o
@@ -3946,9 +3945,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_49_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_49_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_51_o
@@ -3956,9 +3955,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_51_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_51_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_53_o
@@ -3966,9 +3965,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_53_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_53_o|         |         |    1.591|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_55_o
@@ -3976,9 +3975,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_55_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_55_o|         |         |    1.595|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_57_o
@@ -3986,9 +3985,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_57_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_57_o|         |         |    1.595|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_59_o
@@ -3996,9 +3995,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_59_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_59_o|         |         |    1.600|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_5_o
@@ -4006,9 +4005,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_5_o
                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
-rdclk                  |         |         |    2.179|         |
+rdclk                  |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_5_o|         |         |    1.591|         |
-wclk                   |         |         |    2.002|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_61_o
@@ -4016,9 +4015,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_61_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_61_o|         |         |    1.600|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_63_o
@@ -4026,9 +4025,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_63_o
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |         |         |    2.179|         |
+rdclk                   |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_63_o|         |         |    1.600|         |
-wclk                    |         |         |    2.002|         |
+wclk                    |         |         |    2.390|         |
 ------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_7_o
@@ -4036,9 +4035,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_7_o
                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
-rdclk                  |         |         |    2.179|         |
+rdclk                  |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_7_o|         |         |    1.591|         |
-wclk                   |         |         |    2.002|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock w/C1/en_bin[31]_AND_9_o
@@ -4046,9 +4045,9 @@ Clock to Setup on destination clock w/C1/en_bin[31]_AND_9_o
                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -----------------------+---------+---------+---------+---------+
-rdclk                  |         |         |    2.179|         |
+rdclk                  |         |         |    2.474|         |
 w/C1/en_bin[31]_AND_9_o|         |         |    1.591|         |
-wclk                   |         |         |    2.002|         |
+wclk                   |         |         |    2.390|         |
 -----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock wclk
@@ -4056,7 +4055,7 @@ Clock to Setup on destination clock wclk
                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------+---------+---------+---------+---------+
-rdclk                   |    2.179|         |         |         |
+rdclk                   |    2.474|         |         |         |
 w/C1/en_bin[31]_AND_11_o|         |    2.720|         |         |
 w/C1/en_bin[31]_AND_13_o|         |    2.847|         |         |
 w/C1/en_bin[31]_AND_15_o|         |    2.854|         |         |
@@ -4095,14 +4094,14 @@ wclk                    |    3.043|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.16 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.51 secs
  
 --> 
 
-Total memory usage is 4626164 kilobytes
+Total memory usage is 301696 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 
