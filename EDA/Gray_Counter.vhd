@@ -40,7 +40,7 @@ end Gray_Counter;
 
 architecture Behavioral of Gray_Counter is  
 SIGNAL curr, next_s,temp: std_logic_vector (3 DOWNTO 0):=(others=>'0');
-signal bin:Integer:=0;
+signal bin:Integer:=1;
 begin
 
 p1:process(clk,reset)

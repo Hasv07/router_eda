@@ -9,8 +9,8 @@ Parsing VHDL file "D:/EDA/New folder/EDA/fifo_controller.vhd" into library work
 Parsing VHDL file "D:/EDA/New folder/EDA/fifo_controller_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 161172 KB
-Fuse CPU Usage: 249 ms
+Fuse Memory Usage: 160788 KB
+Fuse CPU Usage: 264 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -19,7 +19,8 @@ Compiling architecture behavioral of entity gray_to_binary [gray_to_binary_defau
 Compiling architecture behavioral of entity fifo_controller [fifo_controller_default]
 Compiling architecture behavior of entity fifo_controller_tb
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 10 VHDL Units
 Built simulation executable D:/EDA/New folder/EDA/fifo_controller_tb_isim_beh.exe
-Fuse Memory Usage: 177792 KB
-Fuse CPU Usage: 405 ms
+Fuse Memory Usage: 177408 KB
+Fuse CPU Usage: 437 ms

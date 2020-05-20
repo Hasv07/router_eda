@@ -113,15 +113,14 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-   reset<='1';
-	wait for 10 ns;
 	reset<='0';
 	wreq<='1';
+	rreq<='1';
+
 	for i in 0 to 8 loop
 	     wait until rdclk='1' and rdclk'event;
    end loop;
 	   wreq<='0';
-		rreq<='1';
 	for i in 0 to 7 loop
 	     wait until rdclk='1' and rdclk'event;
    end loop;

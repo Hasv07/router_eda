@@ -1,15 +1,15 @@
 Command line:
    gray_to_binary_tb_isim_beh.exe
      -simmode  gui
-     -simrunnum  1
-     -socket  64864
+     -simrunnum  0
+     -socket  52387
 
-Wed May 20 04:50:30 2020
+Wed May 20 14:05:03 2020
 
 
- Elaboration Time: 0.140625 sec
+ Elaboration Time: 0.109375 sec
 
- Current Memory Usage: 865.292 Meg
+ Current Memory Usage: 865.096 Meg
 
  Total Signals          : 19
  Total Nets             : 27
@@ -22,7 +22,7 @@ Wed May 20 04:50:30 2020
 
  Total Simulation Time: 0.140625 sec
 
- Current Memory Usage: 707.744 Meg
+ Current Memory Usage: 1180.19 Meg
 
-Wed May 20 04:57:41 2020
+Wed May 20 14:05:41 2020
 
