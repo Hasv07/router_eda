@@ -1,3 +1,0 @@
-vhdl work "Gray_Counter.vhd"
-vhdl work "gra_to_binary.vhd"
-vhdl work "fifo_controller.vhd"
