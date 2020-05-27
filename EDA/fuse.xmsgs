@@ -5,5 +5,14 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"D:/EDA/New folder/EDA/router.vhd" Line 134: Actual for formal port <arg fmt="%s" index="1">en</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="946" delta="unknown" >"D:/EDA/New folder/EDA/router.vhd" Line 139: Actual for formal port <arg fmt="%s" index="1">rreq</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1242" delta="unknown" >"N:/P.20131013/rtf/vhdl/src/ieee/numeric_std.vhd" Line 3211: <arg fmt="%s" index="1">Warning</arg>: <arg fmt="%s" index="2">&quot;NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0&quot;</arg>
+</msg>
+
 </messages>
 

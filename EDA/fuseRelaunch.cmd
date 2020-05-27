@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "D:/EDA/New folder/EDA/fifo_controller_tb_isim_beh.exe" -prj "D:/EDA/New folder/EDA/fifo_controller_tb_beh.prj" "work.fifo_controller_tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "D:/EDA/New folder/EDA/router_tb_isim_beh.exe" -prj "D:/EDA/New folder/EDA/router_tb_beh.prj" "work.router_tb" 
