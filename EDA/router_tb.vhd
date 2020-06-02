@@ -125,16 +125,27 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-	datai1<="11111011";
-       wr1<='1';	
- datai2<="11011000";
-       wr2<='1';	
-	datai3<="10111010";
-       wr3<='1';	
-		datai4<="11011001";
-       wr4<='1';	 
 
-      wait;
+     wr1<='1';	
+    datai1<="10111000";	  
+     wr2<='1';	
+		datai2<="11011001";	  
+	  wr3<='1';	
+		datai3<="11101010";	  
+      wr4<='1';	
+		datai4<="11110011";	  
+		wait for wclock_period;
+		
+     wr1<='1';	
+    datai1<="01111000";	  
+     wr2<='1';	
+		datai2<="00111001";	  
+	  wr3<='1';	
+		datai3<="00011010";	  
+      wr4<='1';	
+		datai4<="00001011";	  
+
+		wait;
    end process;
 
 END;

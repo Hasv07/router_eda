@@ -16,10 +16,9 @@ WARNING:HDLCompiler:946 - "D:/EDA/New folder/EDA/router.vhd" Line 134: Actual fo
 WARNING:HDLCompiler:946 - "D:/EDA/New folder/EDA/router.vhd" Line 139: Actual for formal port rreq is neither a static name nor a globally static expression
 Parsing VHDL file "D:/EDA/New folder/EDA/router_tb.vhd" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1242 - "N:/P.20131013/rtf/vhdl/src/ieee/numeric_std.vhd" Line 3211: Warning: "NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0"
 Completed static elaboration
-Fuse Memory Usage: 160660 KB
-Fuse CPU Usage: 234 ms
+Fuse Memory Usage: 161236 KB
+Fuse CPU Usage: 343 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling architecture behavioral of entity register8 [register8_default]
@@ -37,5 +36,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 22 VHDL Units
 Built simulation executable D:/EDA/New folder/EDA/router_tb_isim_beh.exe
-Fuse Memory Usage: 178304 KB
-Fuse CPU Usage: 343 ms
+Fuse Memory Usage: 178880 KB
+Fuse CPU Usage: 515 ms

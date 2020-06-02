@@ -105,9 +105,10 @@ BEGIN
    -- Stimulus process
    p1_read: process
    begin		
+	   wait for 10 ns;
       r_en<='1';
 		for i in 0 to 7  loop		   
-		   addr_b<=std_logic_vector(to_signed(i,addr_b'length));
+		   addr_b<=std_logic_vector(to_unsigned(i,addr_b'length));
 	     wait for clk_b_period;
 
 		end loop;
@@ -119,13 +120,28 @@ BEGIN
    begin		
       w_en<='1';
 		for j in 0 to 7 loop
-		   addr_a<=std_logic_vector(to_signed(j,addr_a'length));
-			d_in<=std_logic_vector(to_signed(j,d_in'length));
+		   addr_a<=std_logic_vector(to_unsigned(j,addr_a'length));
+			d_in<=std_logic_vector(to_unsigned(j,d_in'length));
 	     wait for clk_a_period;
 		end loop;
 
       wait;
    end process;
+	
+		
+		  p2_write: process
+   begin		
+      w_en<='1';
+		wait for 100 ns;
+		for k in 0 to 7 loop
+		   addr_a<=std_logic_vector(to_unsigned(k,addr_a'length));
+			d_in<=std_logic_vector(to_unsigned(k+3,d_in'length));
+	     wait for clk_a_period;
+		end loop;
+
+      wait;
+   end process;
+
 
 
 END;

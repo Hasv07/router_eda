@@ -44,10 +44,12 @@ architecture Behavioral of ram is
 type memory is array (0 to 7) of std_logic_vector(7 downto 0);
 signal mem:memory;
 begin
-p1:process(clk_a,clk_b)
-variable a:integer:=to_integer(Signed(addr_a));
-variable b:integer:=to_integer(Signed(addr_b));
+p1:process(clk_a,clk_b,addr_a,addr_b)
+variable a:integer;
+variable b:integer;
 begin
+a:=to_integer(unsigned(addr_a));
+b:=to_integer(unsigned(addr_b));
 if w_en='1' then
      if clk_a='1' and clk_a'event then
 	       mem(a)<=d_in;
