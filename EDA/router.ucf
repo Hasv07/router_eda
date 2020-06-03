@@ -1,0 +1,6 @@
+
+#Created by Constraints Editor (xc7a100t-csg324-3) - 2020/06/02
+NET "rclock" TNM_NET = rclock;
+TIMESPEC TS_rclock = PERIOD "rclock" 20 ns HIGH 50%;
+NET "wclock" TNM_NET = wclock;
+TIMESPEC TS_wclock = PERIOD "wclock" 20 ns HIGH 50%;

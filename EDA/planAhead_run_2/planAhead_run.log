@@ -1,0 +1,83 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/programming/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/programming/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/programming/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {D:/EDA/New folder/EDA/pa.fromNcd.tcl}
+# create_project -name EDA -dir "D:/EDA/New folder/EDA/planAhead_run_2" -part xc7a100tcsg324-3
+# set srcset [get_property srcset [current_run -impl]]
+# set_property design_mode GateLvl $srcset
+# set_property edif_top_file "D:/EDA/New folder/EDA/router.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/EDA/New folder/EDA} }
+# set_property target_constrs_file "router.ucf" [current_fileset -constrset]
+Adding file 'D:/EDA/New folder/EDA/router.ucf' to fileset 'constrs_1'
+# add_files [list {router.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc7a100tcsg324-3
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design router.ngc ...
+WARNING:NetListWriters:298 - No output is written to router.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file router.edif ...
+ngc2edif: Total memory usage is 4339832 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/EDA.data/cache/router_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/EDA.data/cache/router_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 3508 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'router' is not ideal for floorplanning, since the cellview 'router' defined in file 'router.ngc' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+Loading clock regions from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from D:/programming/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from D:/programming/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : D:/programming/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [D:/EDA/New folder/EDA/router.ucf]
+Finished Parsing UCF File [D:/EDA/New folder/EDA/router.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3508 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 2 instances
+  FDC => FDCE: 1026 instances
+  FDE => FDCE: 256 instances
+  FDP => FDPE: 1024 instances
+  LDC => LDCE: 1024 instances
+  LDE => LDCE: 128 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 32 instances
+
+Phase 0 | Netlist Checksum: d1852623
+link_design: Time (s): elapsed = 00:00:22 . Memory (MB): peak = 841.367 ; gain = 349.551
+# read_xdl -file "D:/EDA/New folder/EDA/router.ncd"
+Release 14.7 - xdl P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+WARNING:XDL:213 - The resulting xdl output will not have LUT equation strings or RAM INIT strings.
+Loading device for application Rf_Device from file '7a100t.nph' in environment D:\programming\14.7\ISE_DS\ISE\.
+   "router" is an NCD, version 3.2, device xc7a100t, package csg324, speed -3
+Successfully converted design 'D:\EDA\New folder\EDA\router.ncd' to 'D:\EDA\New folder\EDA\router.xdl'.
+INFO: [Designutils 20-669] Parsing Placement File : D:/EDA/New folder/EDA/router.ncd
+INFO: [Designutils 20-658] Finished Parsing Placement File : D:/EDA/New folder/EDA/router.ncd
+INFO: [Designutils 20-671] Placed 10807 instances
+read_xdl: Time (s): elapsed = 00:00:26 . Memory (MB): peak = 841.367 ; gain = 0.000
+# if {[catch {read_twx -name results_1 -file "D:/EDA/New folder/EDA/router.twx"} eInfo]} {
+#    puts "WARNING: there was a problem importing \"D:/EDA/New folder/EDA/router.twx\": $eInfo"
+# }
+read_twx: Time (s): elapsed = 00:00:22 . Memory (MB): peak = 885.359 ; gain = 39.395
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Jun 02 20:16:42 2020...
+INFO: [Common 17-83] Releasing license: PlanAhead

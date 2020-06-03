@@ -1,0 +1,81 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/programming/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/programming/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/programming/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {D:/EDA/New folder/EDA/pa.fromHdl.tcl}
+# create_project -name EDA -dir "D:/EDA/New folder/EDA/planAhead_run_1" -part xc7a100tcsg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "router.ucf" [current_fileset -constrset]
+Adding file 'D:/EDA/New folder/EDA/router.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {Gray_Counter.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {gra_to_binary.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ram.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {fifo_controller.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {scheduler.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {register8.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {FIFO.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {demux8.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {router.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top router $srcset
+# add_files [list {router.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc7a100tcsg324-3
+Using Verific elaboration
+Parsing VHDL file "D:/programming/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "D:/programming/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "D:/EDA/New folder/EDA/Gray_Counter.vhd" into library work
+Parsing VHDL file "D:/EDA/New folder/EDA/gra_to_binary.vhd" into library work
+Parsing VHDL file "D:/EDA/New folder/EDA/ram.vhd" into library work
+Parsing VHDL file "D:/EDA/New folder/EDA/fifo_controller.vhd" into library work
+Parsing VHDL file "D:/EDA/New folder/EDA/scheduler.vhd" into library work
+Parsing VHDL file "D:/EDA/New folder/EDA/register8.vhd" into library work
+Parsing VHDL file "D:/EDA/New folder/EDA/FIFO.vhd" into library work
+Parsing VHDL file "D:/EDA/New folder/EDA/demux8.vhd" into library work
+Parsing VHDL file "D:/EDA/New folder/EDA/router.vhd" into library work
+WARNING: [HDL 9-946] Actual for formal port en is neither a static name nor a globally static expression [D:/EDA/New folder/EDA/router.vhd:134]
+WARNING: [HDL 9-946] Actual for formal port rreq is neither a static name nor a globally static expression [D:/EDA/New folder/EDA/router.vhd:139]
+Loading clock regions from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from D:/programming/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from D:/programming/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from D:/programming/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : D:/programming/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [D:/EDA/New folder/EDA/router.ucf]
+Finished Parsing UCF File [D:/EDA/New folder/EDA/router.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: ce493d7f
+open_rtl_design: Time (s): elapsed = 00:00:22 . Memory (MB): peak = 844.430 ; gain = 369.355
+update_compile_order -fileset sim_1
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Jun 02 19:51:32 2020...
+INFO: [Common 17-83] Releasing license: PlanAhead
