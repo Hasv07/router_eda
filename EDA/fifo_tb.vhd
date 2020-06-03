@@ -119,6 +119,8 @@ BEGIN
 	wreq<='1';
 	datain<="11111011";
 			wait for wclk_period;
+	datain<="10111000";
+			wait for wclk_period;	
 
 	wreq<='0';
 	

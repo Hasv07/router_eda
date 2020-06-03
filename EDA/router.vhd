@@ -136,7 +136,7 @@ for I in 0 to 3 generate
 fifo_g:
 for I in 0 to 15 generate
       fifo_component: FIFO port map
-        (rst,rclock,wclock,not empty(I),not full(I),fifo_i(I),fifo_out(I),empty(I),full(I));
+        (rst,rclock,wclock,not empty(I),not full(I)and w(I mod 4),fifo_i(I),fifo_out(I),empty(I),full(I));
    end generate fifo_g ;
 rr_g:
 for I in 0 to 3 generate
@@ -148,4 +148,5 @@ datao1<=rr_out(0);
 datao2<=rr_out(1);
 datao3<=rr_out(2);
 datao4<=rr_out(3);
+
 end Behavioral;

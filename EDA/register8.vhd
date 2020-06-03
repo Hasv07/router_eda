@@ -47,6 +47,8 @@ Begin
       if clk='1'and clk'event then
 		     data_out<=data_in;
 	   end if;
+	else   data_out<="UUUUUUUU";
+
 	end if;
    
 end process;

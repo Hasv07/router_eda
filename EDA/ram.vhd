@@ -19,7 +19,8 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
-use IEEE.NUMERIC_STD.all;
+use IEEE.STD_LOGIC_ARITH.all;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -48,8 +49,8 @@ p1:process(clk_a,clk_b,addr_a,addr_b)
 variable a:integer;
 variable b:integer;
 begin
-a:=to_integer(unsigned(addr_a));
-b:=to_integer(unsigned(addr_b));
+a:= conv_integer(unsigned(addr_a));
+b:= conv_integer(unsigned(addr_b));
 if w_en='1' then
      if clk_a='1' and clk_a'event then
 	       mem(a)<=d_in;

@@ -60,7 +60,7 @@ if en='1' then
 end if;
      
 end process;
-temp<=std_logic_vector(to_signed(bin,temp'length));
+temp<=std_logic_vector(to_unsigned(bin,temp'length));
 next_s(3)<=temp(3);
 next_s(2)<=temp(3) xor temp(2);
 next_s(1)<=temp(2) xor temp(1);

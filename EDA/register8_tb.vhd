@@ -91,11 +91,10 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-   reset<='1';
 	clk_en<='0';
    wait for clk_period/2;
 	reset<='0';
-	for i in 0 to 6 loop
+	for i in 1 to 6 loop
 	     data_in<=std_logic_vector(to_signed(i,data_in'length));
 	     wait for clk_period;
 	end loop;
@@ -105,6 +104,9 @@ BEGIN
 		   data_in<=std_logic_vector(to_signed(i,data_in'length));
 
 	     wait for clk_period;
+		  if i=8 then
+		  clk_en<='0';
+		  end if;
 		  wait for 5 ns;
 	 end loop;
     wait;

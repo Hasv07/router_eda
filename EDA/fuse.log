@@ -1,5 +1,5 @@
-Running: D:\programming\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o D:/EDA/New folder/EDA/router_tb_isim_beh.exe -prj D:/EDA/New folder/EDA/router_tb_beh.prj work.router_tb 
-ISim P.20131013 (signature 0x8ef4fb42)
+Running: D:\programming\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o D:/EDA/New folder/EDA/router_tb_isim_beh.exe -prj D:/EDA/New folder/EDA/router_tb_beh.prj work.router_tb 
+ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
@@ -12,17 +12,16 @@ Parsing VHDL file "D:/EDA/New folder/EDA/register8.vhd" into library work
 Parsing VHDL file "D:/EDA/New folder/EDA/FIFO.vhd" into library work
 Parsing VHDL file "D:/EDA/New folder/EDA/demux8.vhd" into library work
 Parsing VHDL file "D:/EDA/New folder/EDA/router.vhd" into library work
-WARNING:HDLCompiler:946 - "D:/EDA/New folder/EDA/router.vhd" Line 134: Actual for formal port en is neither a static name nor a globally static expression
-WARNING:HDLCompiler:946 - "D:/EDA/New folder/EDA/router.vhd" Line 139: Actual for formal port rreq is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/EDA/New folder/EDA/router.vhd" Line 136: Actual for formal port en is neither a static name nor a globally static expression
+WARNING:HDLCompiler:946 - "D:/EDA/New folder/EDA/router.vhd" Line 141: Actual for formal port rreq is neither a static name nor a globally static expression
 Parsing VHDL file "D:/EDA/New folder/EDA/router_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 161236 KB
-Fuse CPU Usage: 343 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling architecture behavioral of entity register8 [register8_default]
 Compiling architecture behavioral of entity demux8 [demux8_default]
+Compiling package std_logic_arith
 Compiling package numeric_std
 Compiling architecture behavioral of entity Gray_Counter [gray_counter_default]
 Compiling architecture behavioral of entity gray_to_binary [gray_to_binary_default]
@@ -34,7 +33,7 @@ Compiling architecture behavioral of entity router [router_default]
 Compiling architecture behavior of entity router_tb
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 22 VHDL Units
+Compiled 23 VHDL Units
 Built simulation executable D:/EDA/New folder/EDA/router_tb_isim_beh.exe
-Fuse Memory Usage: 178880 KB
-Fuse CPU Usage: 515 ms
+Fuse Memory Usage: 37716 KB
+Fuse CPU Usage: 530 ms

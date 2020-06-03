@@ -87,15 +87,15 @@ BEGIN
    begin		
     en<='1';
 	 for i in 0 to 6 loop
-	     d_in<=std_logic_vector(to_signed(i,d_in'length));
-		  sel<=std_logic_vector(to_signed(i rem 4,sel'length));
+	     d_in<=std_logic_vector(to_unsigned(i,d_in'length));
+		  sel<=std_logic_vector(to_unsigned(i rem 4,sel'length));
 		  wait for 20 ns;
 	end loop;
 	
  en<='0';
 	 for i in 0 to 6 loop
-	     d_in<=std_logic_vector(to_signed(i,d_in'length));
-		  sel<=std_logic_vector(to_signed(i rem 4,sel'length));
+	     d_in<=std_logic_vector(to_unsigned(i,d_in'length));
+		  sel<=std_logic_vector(to_unsigned(i rem 4,sel'length));
 		  wait for 20 ns;
 	end loop;
       wait;

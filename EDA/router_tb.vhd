@@ -56,6 +56,7 @@ ARCHITECTURE behavior OF router_tb IS
          datao2 : OUT  std_logic_vector(7 downto 0);
          datao3 : OUT  std_logic_vector(7 downto 0);
          datao4 : OUT  std_logic_vector(7 downto 0)
+	
         );
     END COMPONENT;
     
@@ -78,6 +79,7 @@ ARCHITECTURE behavior OF router_tb IS
    signal datao2 : std_logic_vector(7 downto 0);
    signal datao3 : std_logic_vector(7 downto 0);
    signal datao4 : std_logic_vector(7 downto 0);
+
 
    -- Clock period definitions
    constant wclock_period : time := 10 ns;
@@ -102,6 +104,7 @@ BEGIN
           datao2 => datao2,
           datao3 => datao3,
           datao4 => datao4
+			
         );
 
    -- Clock process definitions
@@ -126,24 +129,35 @@ BEGIN
    stim_proc: process
    begin		
 
-     wr1<='1';	
+  wr1<='1';	
     datai1<="10111000";	  
      wr2<='1';	
 		datai2<="11011001";	  
 	  wr3<='1';	
 		datai3<="11101010";	  
       wr4<='1';	
-		datai4<="11110011";	  
-		wait for wclock_period;
+		datai4<="11110011";	
 		
-     wr1<='1';	
-    datai1<="01111000";	  
+		wait for wclock_period;
+			wr1<='0';	
+     wr2<='0';	
+     wr3<='0';	
+     wr4<='0';	
+	
+	  wait for wclock_period;
+	      datai1<="01111000";	  
+		datai2<="00111001";	  		
+		datai3<="00011010";	 
+		datai4<="00001011";		 
+	     wr1<='1';	
      wr2<='1';	
-		datai2<="00111001";	  
 	  wr3<='1';	
-		datai3<="00011010";	  
-      wr4<='1';	
-		datai4<="00001011";	  
+      wr4<='1';
+		
+ 	
+	
+
+		
 
 		wait;
    end process;

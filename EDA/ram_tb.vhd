@@ -28,6 +28,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
+
  
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -124,16 +125,7 @@ BEGIN
 			d_in<=std_logic_vector(to_unsigned(j,d_in'length));
 	     wait for clk_a_period;
 		end loop;
-
-      wait;
-   end process;
-	
-		
-		  p2_write: process
-   begin		
-      w_en<='1';
-		wait for 100 ns;
-		for k in 0 to 7 loop
+			for k in 0 to 7 loop
 		   addr_a<=std_logic_vector(to_unsigned(k,addr_a'length));
 			d_in<=std_logic_vector(to_unsigned(k+3,d_in'length));
 	     wait for clk_a_period;
@@ -141,6 +133,8 @@ BEGIN
 
       wait;
    end process;
+	
+
 
 
 
